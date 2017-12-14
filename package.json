@@ -4,7 +4,8 @@
   "description": "Scrapes and saves Bittrex minute charts to CSV",
   "main": "scrape.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scraper.js"
   },
   "repository": {
     "type": "git",

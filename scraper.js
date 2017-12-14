@@ -38,7 +38,13 @@ function main() {
         requestURL = 'https://bittrex.com/Api/v2.0/pub/market/GetTicks?marketName=BTC-' + coinName + '&tickInterval=oneMin';
         coin_urls[i] = [requestURL, coinName];
     }
-    
+    function doSetTimeout(i) {
+        // wait 150ms between calls to be nice to the API
+        setTimeout(function() {
+            getAPI(coin_urls[i][0], coin_urls[i][1]);
+        }, 150 * i);
+    }
+
     for(var i in coin_urls){
         try {
             doSetTimeout(i);
@@ -47,16 +53,7 @@ function main() {
             console.log(err);
         }
     }
-
-    function doSetTimeout(i) {
-        // wait 150ms between calls to be nice to the API
-        setTimeout(function() {
-            getAPI(coin_urls[i][0], coin_urls[i][1]);
-        }, 150 * i);
-    }
-
-    console.log('process completed.')
-    
 }
+
 main();
 setInterval(main, 864000000); // we call main every 10 days as trex gives us data for the last 10 days
