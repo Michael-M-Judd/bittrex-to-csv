@@ -1,0 +1,35 @@
+{
+  "name": "bittrex-reader",
+  "version": "1.0.0",
+  "description": "Scrapes and saves Bittrex minute charts to CSV",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-M-Judd/Bittrex-to-csv.git"
+  },
+  "keywords": [
+    "bittrex",
+    "csv",
+    "cryptocurrency",
+    "data",
+    "bittrex",
+    "to",
+    "csv",
+    "historical",
+    "bittrex"
+  ],
+  "author": "Michael Judd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael-M-Judd/Bittrex-to-csv/issues"
+  },
+  "homepage": "https://github.com/Michael-M-Judd/Bittrex-to-csv#readme",
+  "dependencies": {
+    "json2csv": "^3.11.5",
+    "jsontocsv": "^0.3.0",
+    "request": "^2.83.0"
+  }
+}
