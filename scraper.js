@@ -17,7 +17,7 @@ function getAPI(urls, coin_name){
         //console.log(coin_data);
         csv = json2csv({data: coin_data, fields: fields});
         var coin_file = coin_name + '.csv';
-        fs.writeFile(coin_file, csv, function(err) {
+        fs.appendFile(coin_file, csv, function(err) {
             if (err) console.log(coin_name + 'FAILED');
             console.log(coin_name + ' saved');
         });
